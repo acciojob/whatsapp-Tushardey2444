@@ -68,7 +68,7 @@ public class WhatsappService {
             throw new Exception("Group does not exist");
         }
         User user1=whatsappRepository.getAdmin(group);
-        if(!user1.getName().equals(approver.getName()) || user1.getMobile().equals(approver.getMobile())){
+        if(!user1.getMobile().equals(approver.getMobile())){
             throw new Exception("Approver does not have rights");
         }
 
